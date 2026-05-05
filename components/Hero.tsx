@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="top" className="relative pt-16 pb-20 sm:pt-24 sm:pb-28">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[120%] w-screen -translate-x-1/2 overflow-hidden"
+        className="pointer-events-none absolute left-[calc(50%-50vw)] top-0 -z-10 h-[120%] w-screen overflow-hidden"
       >
         <div className="blob blob-1" />
         <div className="blob blob-2" />
