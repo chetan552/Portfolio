@@ -1,4 +1,5 @@
 import ThemeToggle from "./ThemeToggle";
+import CommandPaletteTrigger from "./CommandPaletteTrigger";
 
 const links = [
   { href: "#projects", label: "Projects" },
@@ -31,6 +32,7 @@ export default function Nav() {
               </li>
             ))}
           </ul>
+          <CommandPaletteTrigger />
           <ThemeToggle />
         </div>
       </nav>

@@ -13,9 +13,13 @@ export default function Projects() {
         {projects.map((p) => (
           <article
             key={p.name}
-            className="group flex flex-col rounded-2xl border border-[var(--subtle)] bg-[var(--card)] p-6 transition-colors hover:border-[var(--foreground)]/25"
+            className="group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--subtle)] bg-[var(--card)] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)]/40 hover:shadow-[0_20px_60px_-20px_color-mix(in_oklab,var(--accent)_35%,transparent)]"
           >
-            <div className="flex items-start justify-between gap-3">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[var(--accent)] opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
+            />
+            <div className="relative flex items-start justify-between gap-3">
               <div>
                 <h3 className="text-base font-semibold tracking-tight text-[var(--foreground)]">
                   {p.name}
@@ -45,14 +49,14 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-            <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--foreground)]/75">
+            <p className="relative mt-4 flex-1 text-sm leading-relaxed text-[var(--foreground)]/75">
               {p.description}
             </p>
-            <ul className="mt-5 flex flex-wrap gap-1.5">
+            <ul className="relative mt-5 flex flex-wrap gap-1.5">
               {p.stack.map((s) => (
                 <li
                   key={s}
-                  className="rounded-full border border-[var(--subtle)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--muted)]"
+                  className="rounded-full border border-[var(--subtle)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--muted)] transition-colors group-hover:border-[var(--accent)]/30 group-hover:text-[var(--foreground)]/80"
                 >
                   {s}
                 </li>
